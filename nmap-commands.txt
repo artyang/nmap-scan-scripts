@@ -2,10 +2,10 @@
 sudo nmap -iL $file -T4 --max-rate 100 -O -sV -osscan-guess -Pn --min-parallelism 30 --max-parallelism 100 -vv -A -sS --min-hostgroup 10 -oA $file --dns-servers DNS-SERVERS
 
 #metasploit db_nmap command of the above
-db_nmap -iL $file -T4 --max-rate 100 -O -sV -osscan-guess -Pn --min-parallelism 30 --max-parallelism 100 -vv -A -sS --min-hostgroup 10 -oA $file --dns-servers DNS-SERVERS
+db_nmap -iL $file -T4 --max-rate 100 -O -sV -osscan-guess -Pn --min-parallelism 30 --max-parallelism 100 -vv -A -sS --min-hostgroup 10 --dns-servers DNS-SERVERS
 
 #Lightweight but fast scan suitable for /16
 nmap -iL $file -T4 --max-rate 100 -O -osscan-guess -Pn --min-parallelism 30 --max-parallelism 100 -vv -sS --min-hostgroup 10 -oA $file 
 
 #metasploit db_nmap of the above
-db_nmap nmap -iL $file -T4 --max-rate 100 -O -osscan-guess -Pn --min-parallelism 30 --max-parallelism 100 -vv -sS --min-hostgroup 10 -oA $file 
+db_nmap nmap -iL $file -T4 --max-rate 100 -O -osscan-guess -Pn --min-parallelism 30 --max-parallelism 100 -vv -sS --min-hostgroup 10 

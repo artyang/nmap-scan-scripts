@@ -1,0 +1,5 @@
+# Scan a list of servers, resolving dns, verfiy all services, no ICMP, parallel scans 30-100 at a time, agressive timing
+sudo nmap -iL $file -T4 --max-rate 100 -O -sV -osscan-guess -Pn --min-parallelism 30 --max-parallelism 100 -vv -A -sS --min-hostgroup 10 -oA $file --dns-servers DNS-SERVERS
+
+#Lightweight but fast scan suitable for /16
+nmap -iL $file -T4 --max-rate 100 -O -osscan-guess -Pn --min-parallelism 30 --max-parallelism 100 -vv -sS --min-hostgroup 10 -oA $file 

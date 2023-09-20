@@ -13,4 +13,4 @@ db_nmap -iL $file -p<start_range-end_range> -T4 --max-rate 100 -O -sV -osscan-gu
 nmap -iL $file -T4 --max-rate 100 -O -osscan-guess -Pn --min-parallelism 30 --max-parallelism 100  -sS --min-hostgroup 10 -oA $file 
 
 #metasploit db_nmap of the above
-db_nmap nmap -iL $file -T4 --max-rate 100 -O -osscan-guess -Pn --min-parallelism 30 --max-parallelism 100  -sS --min-hostgroup 10 
+db_nmap -iL $file -T4 --max-rate 100 -O -osscan-guess -Pn --min-parallelism 30 --max-parallelism 100  -sS --min-hostgroup 10 

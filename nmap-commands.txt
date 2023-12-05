@@ -15,5 +15,5 @@ nmap -iL $file -T4 --max-rate 100 -O -osscan-guess -Pn --min-parallelism 30 --ma
 #metasploit db_nmap of the above
 db_nmap -iL $file -T4 --max-rate 100 -O -osscan-guess -Pn --min-parallelism 30 --max-parallelism 100  -sS --min-hostgroup 10 
 
-#fragmenting stealth scan randomizing hosts
+#slow fragmenting stealth scan randomizing hosts
 nmap -f -T2 --data-length 8 --randomize-hosts -ttl 58 [targets] 

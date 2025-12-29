@@ -21,3 +21,7 @@ nmap -f -T2 --data-length 8 --randomize-hosts -ttl 58 [targets]
 #scan using vuln scripts
 nmap [targets] -sS -sV -Pn -n --script vuln,default -oA [file-output]
 
+#combined with High Performance scan
+nmap [targets] -sS -sV -O --osscan-guess -Pn -n --script vuln,default -T4 --max-rate 100 --min-parallelism 30 --max-parallelism 100 --min-hostgroup 10 -vv -A -oA [file-output]
+
+

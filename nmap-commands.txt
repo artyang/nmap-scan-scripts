@@ -17,3 +17,7 @@ db_nmap -iL $file -T4 --max-rate 100 -O -osscan-guess -Pn --min-parallelism 30 -
 
 #slow fragmenting stealth scan randomizing hosts
 nmap -f -T2 --data-length 8 --randomize-hosts -ttl 58 [targets] 
+
+#scan using vuln scripts
+nmap [targets] -sS -sV -Pn -n --script vuln,default -oA [file-output]
+
